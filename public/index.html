@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="採用試験に向けた技量維持・向上を目的とした5日間の集中訓練プログラム。日本航空機操縦士協会主催">
+    <meta name="keywords" content="パイロット訓練, 技量向上, 採用試験対策, FTD訓練, 操縦士, 計器飛行">
+    <meta property="og:title" content="技量向上支援プログラム | 日本航空機操縦士協会">
+    <meta property="og:description" content="採用試験に向けた技量維持・向上を目的とした5日間の集中訓練プログラム">
+    <meta property="og:type" content="website">
+    <title>技量向上支援プログラム | 日本航空機操縦士協会</title>
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Google Fonts - Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation styles */
+        nav {
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav.scrolled a {
+            color: #1f2937;
+        }
+
+        /* Hero section overlay */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.4) 100%);
+        }
+
+        /* Card hover effect */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button hover effect */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+
+        /* Timeline styles */
+        .timeline-item {
+            border-left: 3px solid #0066cc;
+            padding-left: 2rem;
+        }
+
+        .timeline-item.completed {
+            border-left-color: #22c55e;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#hero" class="text-white font-bold text-lg lg:text-xl">
+                        <span class="text-white">技量向上支援</span><span class="text-blue-300">プログラム</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-white hover:text-blue-300 transition">概要</a>
+                    <a href="#features" class="text-white hover:text-blue-300 transition">プログラム</a>
+                    <a href="#schedule" class="text-white hover:text-blue-300 transition">スケジュール</a>
+                    <a href="#requirements" class="text-white hover:text-blue-300 transition">応募条件</a>
+                    <a href="#briefing" class="text-white hover:text-blue-300 transition">説明会</a>
+                    <a href="#contact" class="text-white hover:text-blue-300 transition">お問い合わせ</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white" id="menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <img
+            src="./assets/images/JAPA 写真/IMG_hero.jpeg"
+            alt="Hero Section"
+            loading="eager"
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <!-- Overlay -->
+        <div class="hero-overlay absolute inset-0"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate__animated animate__fadeInUp">
+            <div class="mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                    技量向上支援プログラム
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-200 font-light">
+                    Competency Enhancement Program
+                </p>
+            </div>
+
+            <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
+                航空会社が求めるスキル向上を目指した<br>
+                <span class="text-blue-300 font-semibold">5日間の集中訓練プログラム</span>
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#briefing" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold">
+                    説明会に申し込む
+                </a>
+                <a href="#about" class="btn-primary bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-3 rounded-lg font-semibold border border-white">
+                    プログラムについて
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Courses Overview Section -->
+    <section id="courses" class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    複数のコース構成
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    あなたのバックグラウンドや目標に合わせた<br class="hidden sm:block">カスタマイズされたプログラムをご用意しています
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Course 1: 私立大学既卒者コース -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-lg border-t-4 border-blue-600 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-duration="800">
+                    <div class="mb-6">
+                        <div class="inline-block bg-blue-100 rounded-full p-4 mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17.25S6.5 28 12 28s10-4.745 10-10.75C22 10.998 17.5 6.253 12 6.253z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">私立大学既卒者コース</h3>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        私立大学の操縦コースを卒業された方向けの集中訓練プログラムです。航空会社が求めるスキルを目指して、プロとして求められる技量への道筋を学びます。
+                    </p>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                        <p class="text-blue-900 font-semibold text-lg">4月開催予定</p>
+                        <p class="text-blue-700 text-sm mt-2">詳細はお問い合わせください</p>
+                    </div>
+                </div>
+
+                <!-- Course 2: 事業用双発免許保持者コース -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-lg border-t-4 border-indigo-600 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="mb-6">
+                        <div class="inline-block bg-indigo-100 rounded-full p-4 mb-4">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">事業用双発免許保持者コース</h3>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        事業用双発免許をお持ちの方向けのプログラムです。更なる技能向上を目指し、運用経験を活かしたスキルアップを実現します。
+                    </p>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                        <p class="text-yellow-900 font-semibold text-lg">開催未定</p>
+                        <p class="text-yellow-700 text-sm mt-2">今年冬の開催を予定しています</p>
+                    </div>
+                </div>
+
+                <!-- Course 3: 防衛庁関係コース -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-lg border-t-4 border-purple-600 hover:shadow-xl transition-all" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="mb-6">
+                        <div class="inline-block bg-purple-100 rounded-full p-4 mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">防衛庁関係コース</h3>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        防衛庁関係の職務に携わる方向けの専門プログラムです。民間航空に求められる知識、技量を習得し、運用経験を次のステップへ活かします。
+                    </p>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+                        <p class="text-purple-900 font-semibold text-lg">開催未定</p>
+                        <p class="text-purple-700 text-sm mt-2">今年冬の開催を予定しています</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="mt-16 text-center">
+                <p class="text-gray-700 text-lg mb-6">
+                    各コースの詳細や開催予定についてのご質問は、<br class="hidden sm:block">下記お問い合わせフォームからお気軽にご連絡ください
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition">
+                    お問い合わせフォームへ
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left - Content -->
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        プログラムの<br class="hidden sm:block">本質的な役割
+                    </h2>
+
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        このプログラムは、知識や技術を「教え込む」ものではありません。<br>
+                        <span class="font-semibold text-blue-600">受講者自身の「気づき」を促す</span>ことを目的として設計されています。
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-lg bg-blue-600 text-white">
+                                    <span class="text-lg font-bold">1</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">プロフェッショナルとしての到達レベルを認識する</h3>
+                                <p class="text-gray-600 text-sm mt-1">航空会社で求められる技量とは何かを知る</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-lg bg-blue-600 text-white">
+                                    <span class="text-lg font-bold">2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">自分の現在の操作・判断と比較する</h3>
+                                <p class="text-gray-600 text-sm mt-1">大学で身につけた技量と目指すべきレベルとの距離を測る</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-lg bg-blue-600 text-white">
+                                    <span class="text-lg font-bold">3</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">そのギャップに自ら気づく</h3>
+                                <p class="text-gray-600 text-sm mt-1">何ができていて、何が足りないのかを自分で発見する</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Image -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <img
+                        src="./assets/images/JAPA 写真/IMG_1292.jpeg"
+                        alt="プログラムの本質的な役割"
+                        loading="lazy"
+                        decoding="async"
+                        class="rounded-lg shadow-lg"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    プログラムが提供するもの
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    答えを与えるのではなく、受講者の内側から「自分はどう学ぶべきか」という問いが生まれることを大切にしています
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="800">
+                    <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">到達すべきレベルの明確な提示</h3>
+                    <p class="text-gray-600">プロフェッショナルパイロットとして必要な技量基準を明確に示し、目指すべき方向性を提供します</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">思考の方向性</h3>
+                    <p class="text-gray-600">効果的な学びの姿勢へと導き、自己成長に向かう思考の道筋をサポートします</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">学びの姿勢への気づき</h3>
+                    <p class="text-gray-600">効果的な学習方法を体験を通じて認識し、継続的な成長の基盤を構築します</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+                5日間の訓練プログラム
+            </h2>
+            <p class="text-gray-600 text-center text-lg mb-12 max-w-2xl mx-auto">
+                VFRの基本から始まり、計器飛行、複合的な状況判断へと段階的に難易度を高めていきます
+            </p>
+
+            <div class="space-y-6">
+                <!-- Day 1 -->
+                <div class="card-hover bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600 text-white font-bold text-lg">1日目</div>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">VFR Traffic Pattern & Steep Turn</h3>
+                            <p class="text-gray-700 mt-2"><span class="font-semibold">重点項目：</span>基本操縦技術の確認、風の影響の理解</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="card-hover bg-gradient-to-r from-indigo-50 to-indigo-100 border-l-4 border-indigo-600 p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-600 text-white font-bold text-lg">2日目</div>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">Holding & Teardrop ILS Approach</h3>
+                            <p class="text-gray-700 mt-2"><span class="font-semibold">重点項目：</span>三次元認識、計器飛行の基礎</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="card-hover bg-gradient-to-r from-purple-50 to-purple-100 border-l-4 border-purple-600 p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-600 text-white font-bold text-lg">3日目</div>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">Radar Vector ILS Approach</h3>
+                            <p class="text-gray-700 mt-2"><span class="font-semibold">重点項目：</span>PICとしての判断、ATC活用</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="card-hover bg-gradient-to-r from-pink-50 to-pink-100 border-l-4 border-pink-600 p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-pink-600 text-white font-bold text-lg">4日目</div>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">VOR Approach</h3>
+                            <p class="text-gray-700 mt-2"><span class="font-semibold">重点項目：</span>非精密進入、Step Down管理</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="card-hover bg-gradient-to-r from-green-50 to-green-100 border-l-4 border-green-600 p-6 rounded-lg" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-600 text-white font-bold text-lg">5日目</div>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">統合訓練（Mini Circling選択）</h3>
+                            <p class="text-gray-700 mt-2"><span class="font-semibold">重点項目：</span>統合的技量発揮、成功体験の確立</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview Section -->
+    <section id="overview" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left - Image -->
+                <div data-aos="fade-right" data-aos-duration="800" class="order-2 md:order-1">
+                    <img
+                        src="./assets/images/JAPA 写真/実施概要.jpeg"
+                        alt="実施概要"
+                        loading="lazy"
+                        decoding="async"
+                        class="rounded-lg shadow-lg"
+                    />
+                </div>
+
+                <!-- Right - Content -->
+                <div data-aos="fade-left" data-aos-duration="800" class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        実施概要
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white">
+                                    📅
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">実施期間</h3>
+                                <p class="text-gray-600">5日間の訓練<br><span class="text-sm text-gray-500">訓練日程の選定から終了まで約10日間を要します</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white">
+                                    ⏱️
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">訓練時間</h3>
+                                <p class="text-gray-600">1日あたり3〜4時間<br><span class="text-sm text-gray-500">（ブリーフィング、FTD訓練、デブリーフィングを含む）</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white">
+                                    ✈️
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">使用機材</h3>
+                                <p class="text-gray-600">Flight Training Device（FTD）</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white">
+                                    📍
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">実施場所</h3>
+                                <p class="text-gray-600">日本航空機操縦士協会 事務所<br><span class="text-sm text-gray-500">東京都港区新橋5-34-3 栄進開発ビル2F</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+                応募要件
+            </h2>
+            <p class="text-gray-600 text-center text-lg mb-12 max-w-2xl mx-auto">
+                本プログラムは、以下の資格と状況にある操縦士を対象としています
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Requirements -->
+                <div data-aos="zoom-in" data-aos-duration="800">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                        必須資格
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>事業用操縦士免許（CPL）保有者</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>多発限定資格保有者</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>計器飛行証明保有者</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>私立大学航空操縦学専攻 卒業者または卒業見込み者</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>航空会社採用試験の受験を控えている者</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Situations -->
+                <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                        想定される状況
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>大学卒業後、採用試験までのブランク期間がある</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>実機訓練の機会が限られている</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>計器飛行や進入方式の手順を再確認したい</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>採用試験で求められる技量レベルを維持・向上させたい</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-600 font-bold">•</span>
+                            <span>PICとしての判断力を養いたい</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+                受講料金
+            </h2>
+            <p class="text-gray-600 text-center text-lg mb-12">
+                会員と一般で異なります
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <!-- Member Price -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-lg border-2 border-blue-600" data-aos="flip-left" data-aos-duration="800">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">会員価格</h3>
+                    <div class="mb-6">
+                        <p class="text-5xl font-bold text-blue-600">¥200,000</p>
+                        <p class="text-gray-600 mt-2">税別</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex gap-2">
+                            <span class="text-blue-600">✓</span>
+                            <span>5日間の集中訓練</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-600">✓</span>
+                            <span>FTD訓練機材使用</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-600">✓</span>
+                            <span>専門インストラクターによる指導</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- General Price -->
+                <div class="card-hover bg-white p-8 rounded-lg shadow-md" data-aos="flip-right" data-aos-duration="800">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">一般価格</h3>
+                    <div class="mb-6">
+                        <p class="text-5xl font-bold text-gray-900">¥300,000</p>
+                        <p class="text-gray-600 mt-2">税別</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex gap-2">
+                            <span class="text-gray-600">✓</span>
+                            <span>5日間の集中訓練</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-gray-600">✓</span>
+                            <span>FTD訓練機材使用</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-gray-600">✓</span>
+                            <span>専門インストラクターによる指導</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-gray-600 text-center mt-12 text-sm">
+                ※ 日本航空機操縦士協会の会員の方は、会員価格でご受講いただけます<br>
+                ※ 受講料には教材費を含みます
+            </p>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="success" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+                プログラムの価値
+            </h2>
+            <p class="text-gray-600 text-center text-lg mb-12 max-w-2xl mx-auto">
+                受講者が得られる経験と成長
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg" data-aos="zoom-in" data-aos-duration="800">
+                    <div class="mb-4">
+                        <span class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-blue-600 text-white">
+                            🎯
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">明確な到達目標</h3>
+                    <p class="text-gray-700">プロフェッショナルとして求められる技量レベルを明確に理解し、現在地を把握できます</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="card-hover bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <div class="mb-4">
+                        <span class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-purple-600 text-white">
+                            💡
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">自己認識の深化</h3>
+                    <p class="text-gray-700">自らの強みと課題を客観的に認識し、継続的な成長へ向けた気づきを得ます</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="card-hover bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <div class="mb-4">
+                        <span class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-green-600 text-white">
+                            🚀
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">採用試験への自信</h3>
+                    <p class="text-gray-700">実践的な訓練を通じて技量を確認し、採用試験へ向けた自信を構築できます</p>
+                </div>
+            </div>
+
+            <!-- Community Section -->
+            <div class="mt-16" data-aos="fade-up" data-aos-duration="800">
+                <img
+                    src="./assets/images/JAPA 写真/IMG_1291.jpeg"
+                    alt="Aviation professionals and pilot team demonstrating achievement and collaboration"
+                    loading="lazy"
+                    decoding="async"
+                    class="rounded-lg shadow-lg w-full max-w-2xl mx-auto"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Briefing Session Section -->
+    <section id="briefing" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    説明会開催
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    プログラムの詳細、受講方法、費用、スケジュールなどについて<br>
+                    丁寧にご説明いたします。個別相談も承ります。
+                </p>
+            </div>
+
+            <!-- Briefing Overview Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <!-- Date -->
+                <div class="card-hover bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg border-l-4 border-orange-500" data-aos="zoom-in" data-aos-duration="800">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-2xl">📅</span>
+                        <h3 class="font-bold text-gray-900">開催日時</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">3月初旬開催</p>
+                    <p class="text-gray-600 text-xs mt-2">詳細日時は申込者に個別にご連絡いたします</p>
+                </div>
+
+                <!-- Location -->
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border-l-4 border-blue-500" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-2xl">📍</span>
+                        <h3 class="font-bold text-gray-900">開催場所</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">日本航空機操縦士協会 事務所</p>
+                    <p class="text-gray-600 text-xs mt-2">東京都港区新橋5-34-3 栄進開発ビル2F</p>
+                </div>
+
+                <!-- Capacity -->
+                <div class="card-hover bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border-l-4 border-purple-500" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-2xl">👥</span>
+                        <h3 class="font-bold text-gray-900">定員</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">少人数制</p>
+                    <p class="text-gray-600 text-xs mt-2">個別対応重視のため限定定員</p>
+                </div>
+            </div>
+
+            <!-- Briefing Flow -->
+            <div class="bg-gray-50 p-8 rounded-lg mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-10">説明会の流れ</h3>
+                <p class="text-gray-700 text-lg mb-12">
+                    本説明会は、<span class="font-semibold text-blue-600">柔軟な日程調整</span>を実現するために、<br class="hidden sm:block">
+                    個別対応を重視した進め方となります。
+                </p>
+
+                <div class="space-y-6">
+                    <!-- Step 1 -->
+                    <div class="flex gap-6 pb-6 border-b border-gray-300" data-aos="fade-right" data-aos-duration="800">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-600 text-white font-bold text-xl">
+                                1
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">プログラムの詳細説明（約30分）</h4>
+                            <p class="text-gray-700 mb-3">プログラムの目的、教育方針、5日間の訓練内容について詳しくご説明します。使用するFTDの紹介、受講スケジュール、費用についてもお話しします。</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex gap-2">
+                                    <span class="text-blue-600 font-bold">•</span>
+                                    <span>なぜ「気づき」を重視するのか</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-blue-600 font-bold">•</span>
+                                    <span>各日の訓練内容と到達目標</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-blue-600 font-bold">•</span>
+                                    <span>個別最適化の具体例</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-blue-600 font-bold">•</span>
+                                    <span>受講期間・費用・スケジュール</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex gap-6 pb-6 border-b border-gray-300" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-600 text-white font-bold text-xl">
+                                2
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">個別アンケート（約15分）</h4>
+                            <p class="text-gray-700 mb-3">あなたの現状、課題、目標を把握するためのアンケートにご記入いただきます。</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex gap-2">
+                                    <span class="text-indigo-600 font-bold">•</span>
+                                    <span>これまでの訓練歴・飛行時間</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-indigo-600 font-bold">•</span>
+                                    <span>採用試験の受験状況と結果</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-indigo-600 font-bold">•</span>
+                                    <span>現在の技量に関する自己評価</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-indigo-600 font-bold">•</span>
+                                    <span>特に不安を感じている分野</span>
+                                </li>
+                            </ul>
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mt-4">
+                                <p class="text-gray-700 text-sm font-semibold mb-1">💡 なぜアンケートが必要なのか？</p>
+                                <p class="text-gray-600 text-sm">一人ひとりの状況は異なります。あなたの現状を正確に把握することで、最も効果的なプログラムを設計できます。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex gap-6 pb-6 border-b border-gray-300" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-600 text-white font-bold text-xl">
+                                3
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">個別インタビュー（約20分）</h4>
+                            <p class="text-gray-700 mb-3">アンケートをもとに、より詳しくお話を伺います。</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex gap-2">
+                                    <span class="text-green-600 font-bold">•</span>
+                                    <span>採用試験での具体的な課題</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-green-600 font-bold">•</span>
+                                    <span>どのような操縦士を目指しているか</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-green-600 font-bold">•</span>
+                                    <span>学びに対する姿勢や取り組み方</span>
+                                </li>
+                            </ul>
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded mt-4">
+                                <p class="text-gray-700 text-sm font-semibold mb-1">💡 なぜインタビューが必要なのか？</p>
+                                <p class="text-gray-600 text-sm">このプログラムは「気づき」を促すものです。主体的に取り組む姿勢が不可欠です。双方向の対話を通じて、理解を深めます。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flex gap-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-orange-500 text-white font-bold text-xl">
+                                4
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">担当オペレーターとの訓練日程調整</h4>
+                            <p class="text-gray-700 mb-3">あなたのご都合と訓練内容をもとに、<span class="font-semibold text-orange-600">最適な訓練スケジュール</span>を調整します。</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex gap-2">
+                                    <span class="text-orange-500 font-bold">•</span>
+                                    <span>5日間連続または分散受講の選択</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-orange-500 font-bold">•</span>
+                                    <span>ご都合に合わせた日程の柔軟な調整</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-orange-500 font-bold">•</span>
+                                    <span>訓練開始時期の決定</span>
+                                </li>
+                            </ul>
+                            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded mt-4">
+                                <p class="text-gray-700 text-sm font-semibold mb-1">⚠️ 重要なお知らせ</p>
+                                <p class="text-gray-600 text-sm">説明会当日に受講を即決していただく必要はありません。プログラム内容を十分にご検討いただいた上で、ご判断ください。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="bg-yellow-50 border-2 border-yellow-400 p-8 rounded-lg mb-12" data-aos="zoom-in" data-aos-duration="800">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="text-3xl">📋</span>
+                    重要なお知らせ
+                </h3>
+                <p class="text-gray-800 text-lg font-semibold mb-6">
+                    本プログラムは、全ての方にご参加いただけるものではありません。
+                </p>
+                <p class="text-gray-700 mb-6">
+                    個別インタビューの結果、以下の場合には受講をお断りさせていただくことがあります。
+                </p>
+
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded border-l-4 border-yellow-400">
+                        <h4 class="font-bold text-gray-900 mb-2">プログラムの目的や方針への理解が得られない場合</h4>
+                        <p class="text-gray-600 text-sm">本プログラムは「答えを教える」場ではなく「気づきを促す」場です。この方針に共感いただけない場合、効果的な訓練は困難です。</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded border-l-4 border-yellow-400">
+                        <h4 class="font-bold text-gray-900 mb-2">主体的な学びの姿勢が見られない場合</h4>
+                        <p class="text-gray-600 text-sm">受け身の姿勢では、このプログラムの効果は得られません。自ら考え、気づこうとする意欲が必要です。</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded border-l-4 border-yellow-400">
+                        <h4 class="font-bold text-gray-900 mb-2">スケジュール調整が困難な場合</h4>
+                        <p class="text-gray-600 text-sm">5日間の集中訓練または計画的な受講が不可欠です。スケジュール確保が難しい場合、十分な効果が期待できません。</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded mt-6 border-l-4 border-blue-500">
+                    <p class="text-gray-800 font-semibold mb-2">
+                        これは、あなたのためでもあります。
+                    </p>
+                    <p class="text-gray-700 mb-3">
+                        お互いの時間と労力を無駄にしないため、そして本当に効果的な訓練を提供するため、慎重に判断させていただきます。
+                    </p>
+                    <p class="text-gray-700">
+                        もし受講をお断りする場合でも、その理由は丁寧にお伝えし、今後の取り組み方についてアドバイスさせていただきます。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Preparation Guide -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Things to Prepare -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">✅</span>
+                        事前にご準備いただきたいこと
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex gap-3 bg-blue-50 p-3 rounded">
+                            <span class="text-blue-600 font-bold flex-shrink-0">•</span>
+                            <span class="text-gray-700">これまでの訓練記録（飛行時間、訓練内容など）</span>
+                        </li>
+                        <li class="flex gap-3 bg-blue-50 p-3 rounded">
+                            <span class="text-blue-600 font-bold flex-shrink-0">•</span>
+                            <span class="text-gray-700">採用試験の受験履歴と結果</span>
+                        </li>
+                        <li class="flex gap-3 bg-blue-50 p-3 rounded">
+                            <span class="text-blue-600 font-bold flex-shrink-0">•</span>
+                            <span class="text-gray-700">次回採用試験の予定（決まっている場合）</span>
+                        </li>
+                        <li class="flex gap-3 bg-blue-50 p-3 rounded">
+                            <span class="text-blue-600 font-bold flex-shrink-0">•</span>
+                            <span class="text-gray-700">現在の技量に関する自己評価</span>
+                        </li>
+                        <li class="flex gap-3 bg-blue-50 p-3 rounded">
+                            <span class="text-blue-600 font-bold flex-shrink-0">•</span>
+                            <span class="text-gray-700">プログラムに期待すること、学びたいこと</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 text-sm mt-4 p-3 bg-gray-100 rounded">
+                        ※ 正式な記録である必要はありません。メモ程度で構いません。<br>
+                        これらの情報をもとに、より具体的なアドバイスが可能になります。
+                    </p>
+                </div>
+
+                <!-- Welcome Questions -->
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <span class="text-3xl">💭</span>
+                        こんな質問も歓迎します
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex gap-3 bg-purple-50 p-3 rounded">
+                            <span class="text-purple-600 font-bold flex-shrink-0">"</span>
+                            <span class="text-gray-700">自分の技量レベルで受講可能か？</span>
+                        </li>
+                        <li class="flex gap-3 bg-purple-50 p-3 rounded">
+                            <span class="text-purple-600 font-bold flex-shrink-0">"</span>
+                            <span class="text-gray-700">具体的にどのような訓練をするのか？</span>
+                        </li>
+                        <li class="flex gap-3 bg-purple-50 p-3 rounded">
+                            <span class="text-purple-600 font-bold flex-shrink-0">"</span>
+                            <span class="text-gray-700">費用はどのくらいかかるのか？</span>
+                        </li>
+                        <li class="flex gap-3 bg-purple-50 p-3 rounded">
+                            <span class="text-purple-600 font-bold flex-shrink-0">"</span>
+                            <span class="text-gray-700">スケジュールの調整は可能か？</span>
+                        </li>
+                        <li class="flex gap-3 bg-purple-50 p-3 rounded">
+                            <span class="text-purple-600 font-bold flex-shrink-0">"</span>
+                            <span class="text-gray-700">採用試験までの準備として効果的か？</span>
+                        </li>
+                    </ul>
+                    <p class="text-gray-700 text-lg mt-6 font-semibold">
+                        些細なことでも構いません。不安や疑問は全てお聞かせください。
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center">
+                <a href="#contact" class="inline-block btn-primary bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg">
+                    説明会に申し込む
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+                        お問い合わせ・<br>応募について
+                    </h2>
+
+                    <div class="space-y-6 text-white">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white bg-opacity-20">
+                                    📞
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">電話でのお問い合わせ</h3>
+                                <p class="text-blue-100 mt-1">03-6809-2902</p>
+                                <p class="text-blue-200 text-sm mt-2">営業時間：平日 9:00～17:00</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white bg-opacity-20">
+                                    📍
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">実施場所</h3>
+                                <p class="text-blue-100 mt-1">
+                                    日本航空機操縦士協会 事務所<br>
+                                    東京都港区新橋5-34-3<br>
+                                    栄進開発ビル2F
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <span class="inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white bg-opacity-20">
+                                    👥
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">募集定員</h3>
+                                <p class="text-blue-100 mt-1">10名前後</p>
+                                <p class="text-blue-200 text-sm mt-2">※定員に達した場合は締め切らせていただきます</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://www.japa.or.jp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                            日本航空機操縦士協会 公式サイト
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form - SSGForm -->
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <div class="bg-white rounded-lg p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">技量向上支援プログラム説明会 申込フォーム</h3>
+                        <p class="text-gray-600 text-sm mb-6">
+                            一般社団法人 日本航空機操縦士協会が開催する「技量向上支援プログラム説明会」へのお申し込みフォームです。<br><br>
+                            <strong>※ 説明会は3月初旬に開催予定です。詳細な日時は、お申し込み後に個別にご連絡いたします。</strong><br>
+                            <strong>※ 所要時間：約90分（プログラム説明、アンケート、個別インタビューを含む）</strong>
+                        </p>
+
+                        <form id="application-form" action="https://ssgform.com/s/9L33MDr2CHs8" method="POST" class="space-y-4">
+                            <!-- Honeypot field -->
+                            <input type="hidden" name="_gotcha" value="">
+
+                            <!-- Time-based validation field -->
+                            <input type="hidden" name="_form_loaded_at" id="_form_loaded_at" value="">
+
+                            <!-- 1. お名前 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">お名前 <span class="text-red-600">*</span></label>
+                                <input
+                                    type="text"
+                                    name="お名前"
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="山田 太郎"
+                                />
+                            </div>
+
+                            <!-- 2. フリガナ -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">フリガナ <span class="text-red-600">*</span></label>
+                                <input
+                                    type="text"
+                                    name="フリガナ"
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="ヤマダ タロウ"
+                                />
+                            </div>
+
+                            <!-- 3. メールアドレス -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">メールアドレス <span class="text-red-600">*</span></label>
+                                <input
+                                    type="email"
+                                    name="メールアドレス"
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="example@email.com"
+                                />
+                                <p class="text-gray-600 text-xs mt-1">確認メールをお送りします。受信可能なアドレスをご記入ください。</p>
+                            </div>
+
+                            <!-- 4. 電話番号 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">電話番号 <span class="text-red-600">*</span></label>
+                                <input
+                                    type="tel"
+                                    name="電話番号"
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="090-1234-5678"
+                                />
+                                <p class="text-gray-600 text-xs mt-1">当日の連絡用です。</p>
+                            </div>
+
+                            <!-- 5. 卒業大学 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">卒業大学 <span class="text-red-600">*</span></label>
+                                <input
+                                    type="text"
+                                    name="卒業大学"
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="○○大学 航空操縦学専攻"
+                                />
+                            </div>
+
+                            <!-- 6. 卒業年月 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">卒業年月 <span class="text-red-600">*</span></label>
+                                <input
+                                    type="month"
+                                    name="卒業年月"
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                />
+                            </div>
+
+                            <!-- 7. 保有資格 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">保有資格（複数選択可）<span class="text-red-600">*</span></label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="保有資格" value="事業用操縦士（CPL）" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">事業用操縦士（CPL）</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="保有資格" value="多発限定" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">多発限定</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="保有資格" value="計器飛行証明" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">計器飛行証明</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="保有資格" value="その他" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">その他（自由記述）</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="保有資格_その他詳細"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"
+                                        placeholder="その他の資格がある場合はご記入ください"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- 8. 総飛行時間 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">総飛行時間 <span class="text-red-600">*</span></label>
+                                <input
+                                    type="text"
+                                    name="総飛行時間"
+                                    required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="例：250時間"
+                                />
+                                <p class="text-gray-600 text-xs mt-1">おおよその時間で構いません。</p>
+                            </div>
+
+                            <!-- 9. 採用試験の受験状況 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">採用試験の受験状況 <span class="text-red-600">*</span></label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="採用試験の受験状況" value="受験経験あり（最終選考で不合格）" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">受験経験あり（最終選考で不合格）</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="採用試験の受験状況" value="受験経験あり（途中の選考で不合格）" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">受験経験あり（途中の選考で不合格）</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="採用試験の受験状況" value="受験したが、結果待ち" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">受験したが、結果待ち</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="採用試験の受験状況" value="まだ受験していない" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">まだ受験していない</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="採用試験の受験状況" value="その他" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">その他</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 10. 採用試験受験社数 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">採用試験受験社数（受験経験がある方）</label>
+                                <input
+                                    type="text"
+                                    name="採用試験受験社数"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="例：3社"
+                                />
+                            </div>
+
+                            <!-- 11. 次回採用試験の予定 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">次回採用試験の予定 <span class="text-red-600">*</span></label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="次回採用試験の予定" value="2026年（6〜8月）に受験予定" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">2026年（6〜8月）に受験予定</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="次回採用試験の予定" value="2026年（9〜10月）に受験予定" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">2026年（9〜10月）に受験予定</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="次回採用試験の予定" value="2026年（11〜12月）に受験予定" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">2026年（11〜12月）に受験予定</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="次回採用試験の予定" value="2027年以降に受験予定" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">2027年以降に受験予定</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="次回採用試験の予定" value="まだ決まっていない" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">まだ決まっていない</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 12. 現在の技量に関する自己評価 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">現在の技量に関する自己評価 <span class="text-red-600">*</span></label>
+                                <textarea
+                                    name="現在の技量に関する自己評価"
+                                    required
+                                    rows="3"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="例：VFR飛行は問題ないが、計器飛行に不安がある&#10;Holdingの精度が低い&#10;ATCとのやり取りに自信がない&#10;など、率直にお書きください。"
+                                ></textarea>
+                                <p class="text-gray-600 text-xs mt-1">現在のご自身の技量について、率直にお書きください。強み・弱みの両方をお聞かせください。</p>
+                            </div>
+
+                            <!-- 13. 特に不安を感じている分野 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">特に不安を感じている分野（複数選択可）</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="VFR Traffic Pattern" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">VFR Traffic Pattern</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="計器飛行全般" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">計器飛行全般</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="Holding（待機飛行）" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">Holding（待機飛行）</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="ILS Approach" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">ILS Approach</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="VOR Approach" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">VOR Approach</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="Circling Approach" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">Circling Approach</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="ATCとのコミュニケーション" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">ATCとのコミュニケーション</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="風への対応" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">風への対応</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="判断力・状況認識" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">判断力・状況認識</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="特に不安を感じている分野" value="その他" class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">その他（自由記述）</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="特に不安を感じている分野_その他詳細"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"
+                                        placeholder="その他の不安な分野がある場合はご記入ください"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- 14. 最も改善したい技量 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">最も改善したい技量 <span class="text-red-600">*</span></label>
+                                <textarea
+                                    name="最も改善したい技量"
+                                    required
+                                    rows="3"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="例：計器飛行での三次元的な機位認識&#10;Final Approachでの繊細なコントロール&#10;PICとしての判断力&#10;など、具体的にお書きください。"
+                                ></textarea>
+                                <p class="text-gray-600 text-xs mt-1">このプログラムを通じて、特に改善したい技量を具体的にお書きください。</p>
+                            </div>
+
+                            <!-- 15. プログラムに期待すること -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">プログラムに期待すること <span class="text-red-600">*</span></label>
+                                <textarea
+                                    name="プログラムに期待すること"
+                                    required
+                                    rows="3"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="例：採用試験で求められるレベルを知りたい&#10;自分の課題を明確にしたい&#10;ブランク期間の技量低下を回復したい&#10;など、率直にお書きください。"
+                                ></textarea>
+                                <p class="text-gray-600 text-xs mt-1">このプログラムに何を期待しているか、率直にお書きください。</p>
+                            </div>
+
+                            <!-- 16. 説明会参加方法 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">説明会参加方法 <span class="text-red-600">*</span></label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="説明会参加方法" value="会場参加を希望" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">会場参加を希望</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="説明会参加方法" value="オンライン参加を希望" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">オンライン参加を希望</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="説明会参加方法" value="どちらでも可能" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">どちらでも可能</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 17. 参加可能な日程 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">参加可能な日程</label>
+                                <p class="text-gray-600 text-sm">未定</p>
+                                <p class="text-gray-600 text-xs mt-2">説明会の詳細日程が決定しましたら、改めてお知らせいたします。</p>
+                            </div>
+
+                            <!-- 18. スケジュール調整の可否 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">スケジュール調整の可否 <span class="text-red-600">*</span></label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="スケジュール調整の可否" value="5日間連続での受講が可能" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">5日間連続での受講が可能</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="スケジュール調整の可否" value="週1回ペースでの受講を希望" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">週1回ペースでの受講を希望</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="スケジュール調整の可否" value="隔週ペースでの受講を希望" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">隔週ペースでの受講を希望</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="スケジュール調整の可否" value="スケジュールは柔軟に調整可能" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">スケジュールは柔軟に調整可能</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="スケジュール調整の可否" value="スケジュール調整が難しい" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">スケジュール調整が難しい</span>
+                                    </label>
+                                </div>
+                                <p class="text-gray-600 text-xs mt-2">本プログラムは5日間の訓練です。受講スケジュールについてお聞かせください。</p>
+                            </div>
+
+                            <!-- 19. このプログラムを知ったきっかけ -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">このプログラムを知ったきっかけ <span class="text-red-600">*</span></label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="このプログラムを知ったきっかけ" value="日本航空機操縦士協会のホームページ" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">日本航空機操縦士協会のホームページ</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="このプログラムを知ったきっかけ" value="知人からの紹介" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">知人からの紹介</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="このプログラムを知ったきっかけ" value="大学の先生・スタッフから" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">大学の先生・スタッフから</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="このプログラムを知ったきっかけ" value="SNS" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">SNS</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="このプログラムを知ったきっかけ" value="その他" required class="w-4 h-4 text-blue-600">
+                                        <span class="ml-2 text-gray-700">その他（自由記述）</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="このプログラムを知ったきっかけ_その他詳細"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"
+                                        placeholder="その他の場合はご記入ください"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- 20. ご質問・ご相談事項 -->
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">ご質問・ご相談事項</label>
+                                <textarea
+                                    name="ご質問_ご相談事項"
+                                    rows="3"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                                    placeholder="説明会で特に聞きたいこと、ご相談したいことがあればお書きください。"
+                                ></textarea>
+                                <p class="text-gray-600 text-xs mt-1">説明会前に確認しておきたいことがあればお書きください。</p>
+                            </div>
+
+                            <!-- 21. 個人情報の取り扱いについて -->
+                            <div>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="個人情報の取り扱いについて同意" value="同意する" required class="w-4 h-4 text-blue-600">
+                                    <span class="ml-2 text-gray-700 font-semibold">個人情報の取り扱いについて同意します <span class="text-red-600">*</span></span>
+                                </label>
+                                <div class="bg-gray-50 p-4 rounded mt-3 text-gray-600 text-xs">
+                                    <p class="font-semibold mb-2">個人情報の取扱について</p>
+                                    <p>ご記入いただいた個人情報は、説明会のご案内およびプログラムに関する連絡のみに使用します。<br>第三者への提供は一切行いません。</p>
+                                </div>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full btn-primary bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold mt-8"
+                            >
+                                フォームを送信する
+                            </button>
+                        </form>
+
+                        <p class="text-gray-600 text-xs mt-4">
+                            ※送信後、確認のメールをお送りします
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">技量向上支援プログラム</h3>
+                    <p class="text-sm">採用試験に向けた技量維持・向上のための5日間集中訓練プログラム</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">主催</h4>
+                    <p class="text-sm">一般社団法人 日本航空機操縦士協会<br><a href="https://www.japa.or.jp" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">www.japa.or.jp</a></p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">お問い合わせ</h4>
+                    <p class="text-sm">
+                        📞 03-6809-2902<br>
+                        📍 東京都港区新橋5-34-3<br>
+                        栄進開発ビル2F
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-center text-sm">
+                    © 2025 Japan Aircraft Pilot Association. All rights reserved.<br>
+                    技量向上支援プログラム 令和7年度版
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        const navLinks = navbar.querySelectorAll('a');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+
+        // Application form handling - Set timestamp for time-based validation
+        const applicationForm = document.getElementById('application-form');
+        if (applicationForm) {
+            // Set the form loaded timestamp
+            const formLoadedAtField = document.getElementById('_form_loaded_at');
+            if (formLoadedAtField) {
+                formLoadedAtField.value = new Date().toISOString();
+            }
+
+            // Handle form submission
+            applicationForm.addEventListener('submit', (e) => {
+                // SSGForm will handle the submission
+                // No need to prevent default - let the form submit naturally to SSGForm
+                console.log('Application form submitted');
+            });
+        }
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
