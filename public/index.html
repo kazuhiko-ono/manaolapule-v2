@@ -99,13 +99,15 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="text-white hover:text-blue-300 transition">概要</a>
                     <a href="#features" class="text-white hover:text-blue-300 transition">プログラム</a>
                     <a href="#schedule" class="text-white hover:text-blue-300 transition">スケジュール</a>
                     <a href="#requirements" class="text-white hover:text-blue-300 transition">応募条件</a>
                     <a href="#briefing" class="text-white hover:text-blue-300 transition">説明会</a>
                     <a href="#contact" class="text-white hover:text-blue-300 transition">お問い合わせ</a>
+                    <!-- 資料請求ボタン -->
+                    <a href="#materials" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition">資料請求</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -1039,6 +1041,114 @@
         </div>
     </section>
 
+    <!-- Materials Request Section -->
+    <section id="materials" class="py-16 md:py-24 bg-gradient-to-r from-orange-50 to-amber-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        プログラム資料を<br>ダウンロード
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        技量向上支援プログラムの詳しい内容、訓練スケジュール、料金等をまとめた資料を無料でダウンロードいただけます。
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">詳細なプログラム内容</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">訓練スケジュール</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">料金・費用について</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-orange-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">受講生の声・実績</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right Form -->
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <div class="bg-white p-8 rounded-lg shadow-xl">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">資料請求フォーム</h3>
+                        <form id="materials-form" action="https://ssgform.com/s/9L33MDr2CHs8" method="POST" class="space-y-4">
+                            <input type="hidden" name="form_type" value="materials_request">
+                            <input type="hidden" name="_form_loaded_at" id="_materials_form_loaded_at" value="">
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    お名前 <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-orange-500 focus:outline-none"
+                                    placeholder="山田太郎"
+                                >
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    メールアドレス <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-orange-500 focus:outline-none"
+                                    placeholder="example@example.com"
+                                >
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    電話番号 <span class="text-red-500">*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    required
+                                    class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-orange-500 focus:outline-none"
+                                    placeholder="090-1234-5678"
+                                >
+                            </div>
+
+                            <div class="bg-gray-100 p-4 rounded-lg text-xs text-gray-600">
+                                <p>ご記入いただいた個人情報は、資料のお送りおよびプログラムに関する連絡のみに使用します。<br>第三者への提供は一切行いません。</p>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full btn-primary bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold mt-6 transition"
+                            >
+                                資料を請求する
+                            </button>
+                        </form>
+
+                        <p class="text-gray-600 text-xs mt-4 text-center">
+                            ※送信後、確認のメールをお送りします
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1518,6 +1628,17 @@
         </div>
     </section>
 
+    <!-- Floating Materials Request Button -->
+    <a href="#materials" class="fixed bottom-6 right-6 z-40 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+       title="資料請求">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="absolute right-full mr-3 bg-gray-900 text-white text-sm px-3 py-2 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+            資料請求
+        </span>
+    </a>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1604,6 +1725,23 @@
                 // SSGForm will handle the submission
                 // No need to prevent default - let the form submit naturally to SSGForm
                 console.log('Application form submitted');
+            });
+        }
+
+        // Materials request form handling
+        const materialsForm = document.getElementById('materials-form');
+        if (materialsForm) {
+            // Set the form loaded timestamp
+            const formLoadedAtField = document.getElementById('_materials_form_loaded_at');
+            if (formLoadedAtField) {
+                formLoadedAtField.value = new Date().toISOString();
+            }
+
+            // Handle form submission
+            materialsForm.addEventListener('submit', (e) => {
+                // SSGForm will handle the submission
+                // No need to prevent default - let the form submit naturally to SSGForm
+                console.log('Materials request form submitted');
             });
         }
 
